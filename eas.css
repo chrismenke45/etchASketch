@@ -11,6 +11,9 @@
 .cell {
     font-style: 10px;
 }
-.sketched {
+.sketchBlack {
     background-color: black;
+}
+.sketchGrey {
+    background-color: gray;
 }
