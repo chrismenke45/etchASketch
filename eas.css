@@ -4,6 +4,13 @@
     border-style: solid;
     border-color: black;
     display: grid;
+    background-color: white;
 
 
+}
+.cell {
+    font-style: 10px;
+}
+.sketched {
+    background-color: black;
 }

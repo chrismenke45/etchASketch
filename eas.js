@@ -10,42 +10,30 @@ while (checkGridSize === false) {
     }
 }
 const container = document.querySelector('div[id="container"')
-// container.style.cssText = 'grid-template-columns: repeat(gridSize, 1fr); grid-template-rows: repeat(gridSize, 1fr);'
-
-let rows = document.createElement(".gridRow");
-let cells = document.createElement(".cell");
-
-// Creates a default grid sized 16x16
-function defaultGrid(gridSize) {
-    makeRows(gridSize);
-    makeColumns(gridSize);
-}
-
-// Takes (rows, columns) input and makes a grid
-function makeRows(rowNum) {
-
-    // Creates rows
-    for (r = 0; r < rowNum; r++) {
-        let row = document.createElement("div");
-        container.appendChild(row).className = "gridRow";
-    };
-};
-
-// Creates columns
-function makeColumns(cellNum) {
-    for (i = 0; i < rows.length; i++) {
-        for (j = 0; j < cellNum; j++) {
-            let newCell = document.createElement("div");
-            rows[j].appendChild(newCell).className = "cell";
-        };
-
-    };
-};
-defaultGrid(gridSize);
-/*for (i=1; i <= gridSize; i++) {
+container.style.cssText = `grid-template-columns: repeat(${gridSize}, 1fr); grid-template-rows: repeat(${gridSize}, 1fr);`
+let rowNum;
+let columnNum;
+for (i=1; i <= gridSize; i++) {
     for (j=1; j <= gridSize; j++) {
-        let div = document.createElement('div' + i + j);
-        game.appendChild('div' + i + j)
+        rowNum = i;
+        columnNum = j;
+        let div = document.createElement('div');
+        div.style.cssText = `grid-area: ${rowNum} / ${columnNum} / ${rowNum}+1 / ${columnNum}+1;`
+        div.classList.add('cell')
+        container.appendChild(div);
     }
-} */
-console.log(game);
+} 
+const sketchable = document.querySelectorAll('div[class="cell"]')
+
+console.log(sketchable)
+sketchable.forEach(div => div.addEventListener('mouseover', () => {
+    div.classList.add('sketched');
+}))
+const black = document.querySelector(".black")
+black.addEventListener('click', () => {
+    sketchable.style.cssText = 'background-color: black';
+});
+const grey = document.querySelector(".grey")
+grey.addEventListener('click', () => {
+    sketchable.style.cssText = 'background-color: red';
+});
