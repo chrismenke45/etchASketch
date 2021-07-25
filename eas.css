@@ -5,6 +5,7 @@
     border-color: black;
     display: grid;
     background-color: white;
+    margin: auto;
 
 
 }
@@ -16,4 +17,9 @@
 }
 .sketchGrey {
     background-color: gray;
+}
+#control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

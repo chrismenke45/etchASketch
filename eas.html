@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html id>
-    <head>
-        <script src="eas.js" defer></script>
-        <link rel="stylesheet" href="eas.css">
-    </head>
-    <body>
-        <div id="container">
 
-        </div>
+<head>
+    <script src="eas.js" defer></script>
+    <link rel="stylesheet" href="eas.css">
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <div id='control'>
         <div>
             <button class="blackBtn">Black</button>
             <button class="greyBtn">Grey</button>
             <button class="rainbowBtn">Rainbow</button>
             <button class="clearBtn">Clear Etch A Sketch</button>
         </div>
-    </body>
+        <div>
+            <label for="points"> Amount of Pixels:</label>
+            <input type="range" min="4" max="100" class="gridSizeSelector" value="100">
+        </div>
+    </div>
+</body>
+
 </html>
