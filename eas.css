@@ -1,12 +1,31 @@
+:root {
+    font-family: "Sacramento", sans-serif;
+    color: gold;
+}
+html {
+    background-image: url('background.png');
+    background-size: cover;
+}
+h1 {
+    font-size: 50px;
+    color: gold;
+    text-align: center;
+    background-color: red;
+    width: 600px;
+    margin: auto auto -20px auto;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+}
 #container {
     width: 600px;
     height: 600px;
     border-style: solid;
-    border-color: black;
+    border-color: red;
     display: grid;
     background-color: white;
     margin: auto;
-
+    border-width: 10px;
 
 }
 .cell {
@@ -19,7 +38,24 @@
     background-color: gray;
 }
 #control {
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: red;
+    width: 600px;
+    border-style: solid;
+    border-color: red;
+    border-width: 10px;
+    font-size: 22px;
+}
+#buttons {
+    margin-right: 5px;
+    font-family: inherit;
+}
+#btn {
+    font-family: inherit;
+    color: inherit;
+    background-color: red;
+    font-size: 18px;
 }

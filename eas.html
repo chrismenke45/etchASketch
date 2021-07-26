@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html id>
+<html>
 
 <head>
     <script src="eas.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento">
     <link rel="stylesheet" href="eas.css">
 </head>
 
 <body>
+    <h1>Etch A Sketch </h1>
     <div id="container">
 
     </div>
     <div id='control'>
-        <div>
-            <button class="blackBtn">Black</button>
-            <button class="greyBtn">Grey</button>
-            <button class="rainbowBtn">Rainbow</button>
-            <button class="clearBtn">Clear Etch A Sketch</button>
+        <div id='buttons'>
+            <button id='btn' class="blackBtn">Black</button>
+            <button id='btn' class="greyBtn">Grey</button>
+            <button id='btn' class="rainbowBtn">Rainbow</button>
+            <button id='btn' class="clearBtn">Clear</button>
         </div>
         <div>
-            <label for="points"> Amount of Pixels:</label>
+            <label for="points"> Resolution:</label>
             <input type="range" min="4" max="100" class="gridSizeSelector" value="100">
         </div>
     </div>
